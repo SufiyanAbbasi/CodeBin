@@ -1,0 +1,11 @@
+<!-- Signup Component with Template Driven Forms  -->
+<form class="container " #registerForm="ngForm">
+    <h4>Signup Required</h4>
+    <input type="email" placeholder="Email" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" ngModel #email="ngModel" name="email">
+    <h5 class="red-text" [hidden]="email.valid || email.untouched">Enter Correct Email</h5>
+    <input type="password" placeholder="password" required minLength="8" required ngModel #password="ngModel" name="password">
+    <h5 class="red-text" [hidden]="password.valid || password.untouched" >Password Should be strong</h5>
+    <button class="btn-green" (click)="register(registerForm)">Sign Up</button>
+    <button class="btn-red" (click)="reset(registerForm)">Reset</button>
+
+</form>

@@ -1,0 +1,44 @@
+/* Resetting default margins and paddings */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Styling the navbar container */
+nav {
+    background-color: #333; /* Change this to your desired background color */
+    padding: 10px 20px; /* Adjust padding as needed */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Styling the logo */
+h2 a {
+    color: #fff; /* Change this to your desired text color */
+    text-decoration: none;
+    font-size: 24px; /* Adjust font size as needed */
+}
+
+/* Styling the navigation links */
+ul {
+    list-style-type: none;
+    display: flex;
+}
+
+ul li {
+    margin-right: 10px; /* Adjust margin between items as needed */
+}
+
+ul li a {
+    color: #fff; /* Change this to your desired text color */
+    text-decoration: none;
+    padding: 5px 10px; /* Adjust padding as needed */
+}
+
+/* Styling the active link */
+ul li a.active {
+    background-color: #555; /* Change this to your desired active link background color */
+    border-radius: 5px; /* Adjust border radius as needed */
+}

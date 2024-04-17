@@ -1,0 +1,62 @@
+/* Resetting default margins and paddings */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Styling the form container */
+.container {
+    max-width: 400px; /* Adjust width as needed */
+    height: 300px; /* Adjust height as needed */
+    margin: auto; /* Centering the form */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #f4f4f4; /* Change this to your desired background color */
+    border-radius: 8px; /* Adjust border radius as needed */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Adding a subtle shadow */
+}
+
+/* Styling the form title */
+.container h4 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Styling the form fields */
+.container input[type="email"],
+.container input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc; /* Change this to your desired border color */
+    border-radius: 5px; /* Adjust border radius as needed */
+}
+
+/* Styling the error messages */
+.red-text {
+    color: red;
+    margin-bottom: 10px;
+}
+
+/* Styling the buttons */
+.container button {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    border: none;
+    border-radius: 5px; /* Adjust border radius as needed */
+    cursor: pointer;
+}
+
+.btn-green {
+    background-color: #4CAF50; /* Change this to your desired button color */
+    color: white;
+}
+
+.btn-red {
+    background-color: #f44336; /* Change this to your desired button color */
+    color: white;
+}

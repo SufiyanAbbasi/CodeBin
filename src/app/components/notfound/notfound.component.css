@@ -1,0 +1,8 @@
+/* styles.css or the specific component's CSS file */
+h1 {
+    font-family: 'Arial', sans-serif; /* Use a modern font */
+    color: #d32f2f; /* A bold red color to indicate an error or warning */
+    text-align: center; /* Center-align the text */
+    margin-top: 50px; /* Add some margin to the top */
+    font-size: 48px; /* Make the font larger to catch attention */
+}
