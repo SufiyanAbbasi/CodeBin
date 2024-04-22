@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
+import { DbService } from '../../services/db.service';
+import { snippet } from '../../../models/snippet';
 
 @Component({
   selector: 'app-createbin',
@@ -9,6 +11,7 @@ import { FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angula
   styleUrl: './createbin.component.css'
 })
 export class CreatebinComponent {
+  constructor(private dbService: DbService){}
   title = new FormControl("",[
     Validators.required
   ])
@@ -21,8 +24,8 @@ export class CreatebinComponent {
     code:this.code
   })
 
-  save(){
-    console.log(this.binForm.value)
+  async save(){
+    await this.dbService.createSnippet(this.binForm.value as snippet)  
   }
 
 

@@ -1,0 +1,53 @@
+.snippet-list {
+    display: flex;
+    justify-content: center;
+}
+
+.snippet-list ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.snippet-item {
+    margin: 10px;
+    flex: 0 0 calc(33.33% - 20px); /* Adjust to change number of items per row */
+    max-width: calc(33.33% - 20px); /* Adjust to change number of items per row */
+}
+
+.snippet-box {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    transition: all 0.3s ease; /* Add transition effect */
+}
+
+.snippet-box:hover {
+    transform: translateY(-5px); /* Add a lift effect on hover */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1); /* Add a shadow on hover */
+}
+
+.snippet-box h3 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+
+.snippet-box a {
+    text-decoration: none;
+    color: #333;
+}
+
+.snippet-box a:hover {
+    color: #555;
+}
+li a{
+    text-decoration: none;
+    color: grey;
+    text-transform: capitalize;
+}
+li a:hover{
+    color: black;
+}

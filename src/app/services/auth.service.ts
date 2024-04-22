@@ -7,7 +7,7 @@ import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, si
   providedIn: 'root'
 })
 export class AuthService {
-
+  private uid?: string;
   constructor(private router: Router) {
     const auth = getAuth();
     onAuthStateChanged(auth, (user) => {
@@ -20,7 +20,15 @@ export class AuthService {
       }
     });
   }
-  private uid?: string;
+
+
+  isAuthenticated(){
+    return this.uid ? true : false
+  }
+  
+  getUid(){
+    return this.uid
+  }
 
   registerUser(email: string, password: string) {
 

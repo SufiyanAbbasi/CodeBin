@@ -1,0 +1,27 @@
+<!-- <div>
+    <ul>
+        @if(items.length == 0){
+        <li>No Data</li>
+        }
+        @for(item of items; track item.id){
+        <li><a [routerLink]="['snippet', item.id]">{{item.title}}</a></li>
+        }
+    </ul>
+
+</div> -->
+<div class="snippet-list">
+    <ul>
+        @if(items.length == 0){
+        <li class="no-data">No Data</li>
+        }
+        @for(item of items; track item.id){
+        <li class="snippet-item">
+            <a [routerLink]="['snippet', item.id]">
+                <div class="snippet-box">
+                    <h3>{{item.title}}</h3>
+                </div>
+            </a>
+        </li>
+        }
+    </ul>
+</div>
