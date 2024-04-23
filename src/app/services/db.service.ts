@@ -3,28 +3,17 @@ import { getFirestore } from "firebase/firestore";
 import { collection, addDoc, getDocs, getDoc, doc } from "firebase/firestore";
 import { AuthService } from './auth.service';
 import { snippet } from '../../models/snippet';
+import { Router } from '@angular/router';
 
 @Injectable({
   providedIn: 'root'
 })
 export class DbService {
   private db?: any;
-  constructor(private authService: AuthService) {
+  constructor(private authService: AuthService, private router:Router) {
     this.db = getFirestore()
   }
 
-  // async createSnippet(snippet: snippet) {
-  //   try {
-  //     const docRef = await addDoc(collection(this.db, "snippets"), {
-  //       ...snippet,
-  //       by: this.authService.uid
-  //     });
-  //     console.log("Document written with ID: ", docRef.id);
-  //   } catch (e) {
-  //     console.error("Error adding document: ", e);
-  //     alert('Error While Creating')
-  //   }
-  // }
   async createSnippet(snippet: snippet) {
     try {
       const uid = this.authService.getUid(); // Get the UID using getUid() method
@@ -32,7 +21,9 @@ export class DbService {
         ...snippet,
         by: uid // Use the UID as the value for the 'by' field
       });
+
       console.log("Document written with ID: ", docRef.id);
+      this.router.navigate(['/'])
     } catch (e) {
       console.error("Error adding document: ", e);
       alert('Error While Creating')
@@ -51,7 +42,7 @@ export class DbService {
   }
 
   async getSnippetById(docId:string) {
-    const docRef = doc(this.db, "snippets", "SF");
+    const docRef = doc(this.db, "snippets", docId);
     const docSnap = await getDoc(docRef);
 
     if (docSnap.exists()) {

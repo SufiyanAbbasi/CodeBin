@@ -1,0 +1,13 @@
+/* Style for the container */
+.about-container {
+    text-align: center; /* Center-align the content */
+    padding: 20px; /* Add padding around the content */
+}
+
+/* Style for the heading */
+.about-container h1 {
+    font-family: Arial, sans-serif; /* Use a sans-serif font */
+    color: #333; /* Dark grey color for the text */
+    font-size: 24px; /* Larger font size for the heading */
+    margin: 0; /* Remove default margin */
+}

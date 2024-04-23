@@ -1,0 +1,30 @@
+/* Style for the snippet container */
+.snippet-container {
+    background-color: #f5f5f5; /* Light grey background for the snippet */
+    border: 1px solid #d1d1d1; /* Slight border for definition */
+    border-radius: 8px; /* Rounded corners */
+    padding: 20px; /* Padding around the content */
+    margin: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+/* Style for the snippet title */
+.snippet-title {
+    font-family: 'Arial', sans-serif; /* Modern, readable font */
+    color: #333; /* Dark grey color for the text */
+    border-bottom: 2px solid #e1e1e1; /* Underline for heading */
+    padding-bottom: 10px; /* Space below the line */
+    margin-bottom: 20px; /* Space between title and code */
+}
+
+/* Style for the snippet code block */
+.snippet-code {
+    font-family: 'Courier New', monospace; /* Font that gives a code-like appearance */
+    background-color: #ffffff; /* White background for code block */
+    border: 1px solid #ccc; /* Border to highlight the code block */
+    border-radius: 4px; /* Rounded corners for the code block */
+    padding: 15px; /* Padding inside the code block */
+    overflow-x: auto; /* Allows horizontal scrolling for long lines of code */
+    white-space: pre-wrap; /* Maintains whitespace formatting */
+    word-wrap: break-word; /* Breaks long words at */
+}
